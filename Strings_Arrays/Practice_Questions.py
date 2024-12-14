@@ -25,7 +25,7 @@
 # - Concatenation
 # - Reverse a String
 # - Split and Join
-# - Check Palindrome
+# - Check Palindrome (A palindrome is a word, phrase, number, or sequence that reads the same backward as forward (ignoring spaces, punctuation, and capitalization).)
 
 # 4. STRING ALGORITHMS
 # - Count Occurrences of a Character

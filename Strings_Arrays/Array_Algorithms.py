@@ -1,5 +1,6 @@
 # 2. ARRAY ALGORITHMS
 basicArray = [1,2,3,4,5]
+
 # - Reverse an Array
 print('Reverse an Array')
 print('original array: ', basicArray)
