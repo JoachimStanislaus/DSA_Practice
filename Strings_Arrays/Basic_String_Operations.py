@@ -34,7 +34,7 @@ newString = ''
 print('join String', newString.join(splitString))
 
 # - Check Palindrome (A palindrome is a word, phrase, number, or sequence that reads the same backward as forward (ignoring spaces, punctuation, and capitalization).)
-print('\nCheck if Palindrome')
+print('\nqCheck if Palindrome')
 palindrome = 'rotor'
 
 if (palindrome == palindrome[::-1]):
