@@ -87,5 +87,27 @@ class SingleLinkedList:
 
 
 # 5.2 Doubly Linked List
+
+class DoubleLinkedList:
+    def __init__(self):
+        self.head = None
+
 # - Insert at the end
+    def insert_at_end(self,data):
+        new_node = DLLNode(data)
+        if not self.head:
+            self.head = new_node
+            return
+        temp = self.head
+        while temp.next:
+            temp = temp.next
+        temp.next = new_node
+        new_node.prev = temp
+
 # - Print the linked list
+    def print_LL(self):
+        temp = self.head
+        while temp.next:
+            print(temp.data)
+            temp = temp.next
+        print('None')
