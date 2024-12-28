@@ -114,8 +114,62 @@ class DoubleLinkedList ():
 
 
 # 6. PRACTICE QUESTIONS
-# 1. Implement a Singly Linked List with insert, delete, and print methods.
+# 1. Implement a Single Linked List with insert, delete, and print methods.
+class SingleLLNode:
+    def __init__(self,data):
+        self.data = data
+        self.next = None
+
+class SingleLL:
+    def __init__(self):
+        self.head = None
+    
+    def insert_node_at_end(self,node):
+        temp = self.head
+        if not temp:
+            self.head = node
+            return
+        while temp.next:
+            temp = temp.next
+        temp.next = node
+    
+    def insert_node_at_start(self,node):
+        temp = self.head
+        if not temp:
+            self.head = node
+            return    
+        node.next = temp
+        self.head = node
+    
+    def delete_node(self,node):
+        temp = self.head
+        if not temp:
+            print('empty LL')
+            return
+        if temp == node:
+            self.head = temp.next
+        while temp.next:
+            if temp.next == node:
+                temp.next = temp.next.next
+                print('removed node')
+                return
+            temp = temp.next
+
+    def print_nodes(self):
+        temp = self.head
+        if not temp:
+            print('empty LL')
+            return
+        while temp:
+            print(temp.data)
+            temp = temp.next
+        print('None')
+    
+        
 # 2. Reverse a Singly Linked List.
+
 # 3. Find the Middle Element of a Linked List.
+
 # 4. Detect a Cycle in a Linked List.
+
 # 5. Implement a Doubly Linked List with insert and print methods.
