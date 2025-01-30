@@ -166,7 +166,11 @@ class SingleLL:
         print('None')
     
         
-# 2. Reverse a Singly Linked List.
+# 2. Reverse a Single Linked List.
+    def reverse_LL(self):
+        temp = self.head
+        
+
 
 # 3. Find the Middle Element of a Linked List.
 
