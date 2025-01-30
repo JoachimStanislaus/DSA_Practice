@@ -3,6 +3,14 @@ def getarg(*args):
     # arguments are collected into a tuple for use inside the function
     print(args)
 
+def getarg(*args):
+    # arguments are collected into a tuple for use inside the function
+    lst=[]
+    for arg in args:
+        if arg%2==0:
+            lst.append(arg)
+    print(sum(lst))
+
 # kwarg example where you expect a set of named keyword arguments.
 def getkwarg(**kwarg):
     # keyword arguments are collected into a dictionary for use inside the function
