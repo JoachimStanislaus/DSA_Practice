@@ -197,7 +197,6 @@ class SingleLL:
         
         return slow_ptr
 
-
 # 4. Detect a Cycle in a Linked List.
 
 # 5. Implement a Doubly Linked List with insert and print methods.
