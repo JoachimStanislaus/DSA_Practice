@@ -166,13 +166,37 @@ class SingleLL:
         print('None')
     
         
-# 2. Reverse a Single Linked List.
+# 2. Reverse a Single Linked List and return new Head.
     def reverse_LL(self):
-        temp = self.head
-        
+        current = self.head
+        prev = None
 
+        while current != None:
+            nextNode = current.next
+            current.next = prev
+            
+            prev = current
+            current = nextNode
+        
+        
+        return prev # returning new head of the reversed LL
 
 # 3. Find the Middle Element of a Linked List.
+    def find_middle_LL(self):
+        fast_ptr = self.head
+        slow_ptr = self.head
+
+        if self.head == None:
+            return None
+
+        while fast_ptr != None:
+            fast_ptr = fast_ptr.next
+            if fast_ptr != None:
+                fast_ptr = fast_ptr.next
+            slow_ptr = slow_ptr.next
+        
+        return slow_ptr
+
 
 # 4. Detect a Cycle in a Linked List.
 
