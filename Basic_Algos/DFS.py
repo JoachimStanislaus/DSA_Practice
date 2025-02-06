@@ -1,5 +1,5 @@
-# Breath First Search - Graph Algo
-# Explores layer by layer
+# Depth First Search - Graph Algo 
+# Explores Deep instead of wide
 
 class TreeNode(object):
     def __init__(self, val=0, left=None, right=None):
@@ -7,24 +7,16 @@ class TreeNode(object):
         self.left = left
         self.right = right
 
-from collections import deque
-
-def BFS(root):
+def DFS(root):
     if not root:
         return
+    if not root.left and not root.right:
+        print(root.val)
+        return
     
-    queue = deque([root])
+    DFS(root.left)
+    DFS(root.right)
 
-    while queue:
-        node = queue.popleft()
-        print(node.val)
-
-        if node.left:
-            queue.append(node.left)
-        if node.right:
-            queue.append(node.right)
-
-    
 
 # Example Tree Structure:
 #        1
@@ -40,5 +32,6 @@ root.left.left = TreeNode(4)
 root.left.right = TreeNode(5)
 root.right.right = TreeNode(6)
 
-# Test BFS
-BFS(root)
+# Test DFS
+DFS(root)
+
