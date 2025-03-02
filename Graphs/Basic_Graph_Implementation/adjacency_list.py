@@ -1,3 +1,11 @@
+# How a graph implemented using an adjacency list looks like:
+"""
+0: [1, 3]
+1: [0, 2]
+2: [1, 3]
+3: [0, 2]
+"""
+
 # Implement a graph using an adjacency list.
 class Graph:
     def __init__(self):
