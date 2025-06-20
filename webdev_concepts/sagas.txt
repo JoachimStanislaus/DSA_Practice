@@ -1,0 +1,11 @@
+Sagas are mainly used to handle side effects from actions.
+
+Eg.
+
+When the user submits login details:
+
+You dispatch LOGIN_REQUEST
+The saga sees this and:
+Calls your backend login() function
+Waits for a response
+Dispatches LOGIN_SUCCESS or LOGIN_FAILURE which will be handled by the reducer

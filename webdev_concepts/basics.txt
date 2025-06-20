@@ -1,0 +1,20 @@
+Redux + Saga Setup typical flow
+
+UI → Saga → Reducer
+
+1. UI dispatches an action
+Example: User clicks “Login” → dispatch(loginRequest(payload))
+
+2. Saga listens for that action
+It intercepts loginRequest, calls the API asynchronously.
+
+3. Saga dispatches new actions based on result
+If success: loginSuccess(data)
+If failure: loginFailure(error)
+
+4. Reducer updates the state based on the action
+loginSuccess updates user info and token in the state
+loginFailure updates error message in the state
+
+5. UI reacts to state changes
+The component re-renders based on updated state — shows user info or error messages.

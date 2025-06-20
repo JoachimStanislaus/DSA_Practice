@@ -1,0 +1,4 @@
+Reducers are mainly used for updating states.
+
+Eg.
+When a user logs in, you might dispatch a loginSuccess action. The reducer takes this and updates the state with the user info.
