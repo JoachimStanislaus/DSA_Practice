@@ -1,0 +1,12 @@
+Actions tell redux what happened
+
+You usually create it using an action creator function::
+
+const loginRequest = (payload) => ({
+  type: 'LOGIN_REQUEST',
+  payload,
+});
+
+Then you dispatch it from your component:
+
+dispatch(loginRequest({ email, password }));

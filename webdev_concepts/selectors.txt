@@ -1,0 +1,9 @@
+Selectors — Ask Redux for data
+
+A selector is a function that reads a piece of the Redux state:
+
+const selectUser = (state) => state.auth.user;
+
+In a React component:
+
+const user = useSelector(selectUser);
