@@ -1,0 +1,83 @@
+
+class
+
+namespace
+
+module
+
+What is the difference between function & arrow functions?
+- Regular functions are hoisted (you can use them before they are defined) while arrow functions are not.
+- Arrow functions do not have an arguments object
+- arrow functions capture the this from the scope in which they were defined, while regular functions this depends on how the function is invoked. (Kinda confusing)
+
+Eg:
+const person = {
+  name: "Bob",
+  greet: function () {
+    console.log(`Hi, I'm ${this.name}`);
+  },
+};
+
+Eg:
+class Person {
+  name = "Alice";
+
+  greet = () => {
+    console.log(`Hello, I'm ${this.name}`);
+  };
+}
+
+
+
+
+What is the difference between const & let?
+Use const when you never want to reassign the variable, if it's an object or array, the reference is constant, but the contents can change.
+
+Eg:
+const name = "Alice";
+name = "Bob"; // Not allowed
+
+Eg:
+const user = { name: "Alice" };
+user.name = "Bob"; // Allowed
+
+Use let when you plan to reassign the variable later. 
+
+Eg:
+let counter = 0;
+counter = 1; // Allows
+
+Both are Block scope (variable only exists inside the curly braces where it was defined)
+
+
+
+What is "as" used for?
+It does not change the actual data — it just tells the compiler how to treat the value in terms of type.
+
+Eg:
+let value = "hello" as string;
+
+Eg:
+let input: string | number = "123";
+
+// You know it's a string at this point:
+let strLength = (input as string).length;
+
+
+
+What is the difference between interface & type?
+interface cannot be used for primitives or unions/tuples.
+type does not allow declaration merging.
+both used to define shapes of objects
+
+
+
+What is the difference between enum vs const enum?
+A const enum is a more optimized version of a regular enum in TypeScript.
+It inlines the enum values directly into your compiled JavaScript code, which means:
+- No extra code is generated for the enum.
+- It improves performance and reduces bundle size.
+
+Avoid when: 
+- You need the enum at runtime (e.g. logging Direction[0]).
+- You're working with 3rd-party libraries or shared modules where the enum must be emitted as an object.
