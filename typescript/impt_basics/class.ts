@@ -52,3 +52,40 @@ class Dogs implements Animal {
     console.log("Woof!");
   }
 }
+
+
+// Abstraction
+
+abstract class Animalss {
+  abstract speak(): void;
+
+  move() {
+    console.log("Moving...");
+  }
+}
+
+class Dogss extends Animalss {
+  speak() {
+    console.log("Woof!");
+  }
+}
+
+const dog = new Dogss();
+dog.speak(); // Woof!
+dog.move();  // Moving...
+
+
+// Polymorphism
+
+class Catss extends Animalss {
+  speak() {
+    console.log("Meow!");
+  }
+}
+
+function makeItSpeak(animal: Animalss) {
+  animal.speak(); // Each subclass responds differently
+}
+
+makeItSpeak(new Dogss()); // Woof!
+makeItSpeak(new Catss()); // Meow!
