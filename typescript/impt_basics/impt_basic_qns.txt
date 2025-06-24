@@ -1,7 +1,24 @@
+What is namespace?
+A namespace in TypeScript is a way to organize code into logical groups and prevent naming conflicts, especially in large applications.
 
-class
+It wraps related code (like variables, functions, classes, interfaces) under a single named scope.
 
-namespace
+Not commonly used in modern typescript projects as import / export modules are preferred instead.
+
+
+Eg:
+namespace MathUtils {
+  export function add(a: number, b: number): number {
+    return a + b;
+  }
+
+  export function subtract(a: number, b: number): number {
+    return a - b;
+  }
+}
+
+console.log(MathUtils.add(3, 2)); // 5
+
 
 module
 
