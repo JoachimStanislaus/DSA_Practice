@@ -1,6 +1,6 @@
 Redux + Saga Setup typical flow
 
-UI → Saga → Reducer
+UI → Dispatch Action → Saga → Reducer
 
 1. UI dispatches an action
 Example: User clicks “Login” → dispatch(loginRequest(payload))
