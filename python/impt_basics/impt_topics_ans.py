@@ -36,3 +36,43 @@
 # How do you make a copy of a List?
 # Make a deepcopy by importing copy
 # shallow copy of the list will still only reference nested lists.
+
+# What are comprehensions in python.
+# Comprehensions are a concise way to create new sequences like lists, sets, dictionaries etc.
+# Makes code shorter, more readable and more efficient.
+# eg. [x for x in [1,2,3] if x == 1]
+
+# Are comprehensions faster than for loops? Why?
+# Comprehensions are faster than for loops as When you use a for loop, on every iteration, you have to look up the variable holding the list and then call its append() function. 
+# This doesn't happen in a list comprehension. Instead, there is a special bytecode instruction LIST_APPEND that will append the current value to the list you're constructing.
+
+# What are generators and can you describe how generator really work?
+# They are iterators that allow you to product a sequence of values lazily (one at a time, only when needed) instead of creating the whole sequence in memory at once.
+# Memory efficient and great for working with large or infinite sequences
+# squares = (x**2 for x in range(5))
+# print(next(squares))  # 0
+# print(next(squares))  # 1
+# Each call to next() runs the function until the next yield, then pauses.
+
+# Mutable and Non-Mutable data types.
+# Mutable: List, Dictionary, Set
+# Immutable: Integer, Float, String, Tuple, frozenset
+# tuples are immutable but it can hold mutable objects
+# immutable objects that are literals(written specifically not dynamically created during runtime) are interned (reused)
+
+# Small integers (usually from -5 to 256) are automatically interned(reused).
+# These integers are created at compile-time as literals.
+# Larger integers (outside -5 to 256) are not automatically interned.
+# Python creates a new object each time the literal is used at runtime.
+
+# Is set mutable?
+# Yes
+
+# What is the difference between is and =
+# I=is compares the actual object while = compares the value
+
+# What are Lambda Functions?
+# They are short concise anonymous functions that are usually one liners but you can assign it to a variable.
+
+# Method Overloading. Does Python support Method overloading?
+# No
