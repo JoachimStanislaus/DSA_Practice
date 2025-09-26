@@ -47,7 +47,7 @@
 # This doesn't happen in a list comprehension. Instead, there is a special bytecode instruction LIST_APPEND that will append the current value to the list you're constructing.
 
 # What are generators and can you describe how generator really work?
-# They are iterators that allow you to product a sequence of values lazily (one at a time, only when needed) instead of creating the whole sequence in memory at once.
+# They are iterators that allow you to produce a sequence of values lazily (one at a time, only when needed) instead of creating the whole sequence in memory at once.
 # Memory efficient and great for working with large or infinite sequences
 # squares = (x**2 for x in range(5))
 # print(next(squares))  # 0
@@ -69,7 +69,7 @@
 # Yes
 
 # What is the difference between is and =
-# I=is compares the actual object while = compares the value
+# is compares the identity while = compares the value
 
 # What are Lambda Functions?
 # They are short concise anonymous functions that are usually one liners but you can assign it to a variable.
@@ -82,3 +82,39 @@
 # POST → Create new data
 # PUT/PATCH → Update existing data
 # DELETE → Remove data
+
+# What is a descriptor in python?
+# A descriptor in Python is a special object that controls what happens when you access, assign, or delete an attribute of another object.
+# __get__(self, instance, owner) - to retrieve an attribute from an instance
+# __set__(self, instance, value) - to set an attribute on an instance
+# __delete__(self, instance) - to delete an attribute from an instance
+
+# class MyDescriptor:
+#     def __init__(self, name):
+#         self.name = name
+#         self.value = None
+
+#     def __get__(self, instance, owner):
+#         print(f"Getting {self.name}")
+#         return self.value
+
+#     def __set__(self, instance, value):
+#         print(f"Setting {self.name} to {value}")
+#         self.value = value
+
+# class MyClass:
+#     x = MyDescriptor("x")
+
+# obj = MyClass()
+# obj.x = 10  # Calls MyDescriptor.__set__
+# print(obj.x)  # Calls MyDescriptor.__get__
+
+# Explain Garbage collection in Python?
+# Python uses reference counting and a cyclic garbage collector to manage memory.
+# Reference counting keeps track of the number of references to each object in memory. When an object's reference count drops to zero, it is immediately deallocated.
+# However, reference counting alone cannot handle cyclic references (where two or more objects reference each other). To address this, Python includes a cyclic garbage collector that periodically looks for groups of objects that reference each other but are no longer reachable from the program.
+# The cyclic garbage collector runs in the background and identifies these unreachable cycles, freeing up memory by deallocating the objects involved in the cycle.
+
+# Difference between lists, array and numpy array.
+# Lists can hold elements of different data types while arrays typically hold elements of the same data type.
+# numpy arrays are more efficient for numerical computations and supports multi-dimensional arrays and hold elements of the same data type.

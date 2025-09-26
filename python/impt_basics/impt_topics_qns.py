@@ -10,7 +10,7 @@
 
 # Does python pass by reference or value?
 
-# How do you make a copy of a string?
+# How do you make a copy of a list?
 
 # What are comprehensions in python.
 
@@ -30,3 +30,8 @@
 
 # Explain RESTful APIs
 
+# What is a descriptor in python?
+
+# Explain Garbage collection in Python?
+
+# Difference between lists, array and numpy array.
