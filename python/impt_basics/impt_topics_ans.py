@@ -76,3 +76,9 @@
 
 # Method Overloading. Does Python support Method overloading?
 # No
+
+# Explain RESTful APIs
+# GET → Retrieve data
+# POST → Create new data
+# PUT/PATCH → Update existing data
+# DELETE → Remove data
